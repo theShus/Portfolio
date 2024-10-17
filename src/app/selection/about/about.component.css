@@ -1,0 +1,87 @@
+.section-content {
+  /*padding: 20px;*/
+
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  background-color: white;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.profile-image img {
+  max-width: 100%;
+  height: auto;
+  /*border-radius: 10px;*/
+}
+
+.hp-text-block {
+  padding-left: 30px;
+}
+
+.hp-main-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hp-buttons {
+  margin-top: 20px;
+}
+
+.hp-buttons a {
+  margin-right: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.what-i-do {
+  margin-top: 50px;
+}
+
+.what-i-do h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.services {
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+}
+
+.profile-image{
+  width: 1200px;
+}
+
+.service {
+  width: 30%;
+  padding: 20px;
+  margin-right: 5%;
+}
+
+.service i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.service h4 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.service p {
+  color: #666;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
