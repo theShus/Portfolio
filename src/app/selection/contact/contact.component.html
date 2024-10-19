@@ -1,1 +1,81 @@
-<p>contact works!</p>
+<head>
+  <title>Contact</title>
+</head>
+<body>
+<h1 class="heading">Contact</h1>
+<hr>
+<br>
+<br>
+
+<div class="contact-cards">
+  <div class="contact-card">
+    <i class="fa-solid fa-phone icon"></i>
+    <h4>+381 603190039</h4>
+    <span>Phone</span>
+  </div>
+
+  <div class="contact-card">
+    <i class="fa-solid fa-location-dot icon"></i>
+    <h4>Belgrade</h4>
+    <span>Location</span>
+  </div>
+
+  <div class="contact-card">
+    <i class="fa-solid fa-envelope icon" ></i>
+    <h4>luka.jeremic.social.com</h4>
+    <span>Email</span>
+  </div>
+</div>
+
+<br>
+
+<div class="contact-form">
+  <h2>Send me an email</h2>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <input type="text" formControlName="fullName" class="form-control" placeholder="Full Name">
+      <div *ngIf="contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched" class="error-message">
+        Full Name is required.
+      </div>
+    </div>
+
+    <div class="form-row">
+      <input type="email" formControlName="email" class="form-control" placeholder="Email Address">
+      <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error-message">
+        A valid email is required.
+      </div>
+    </div>
+
+    <div class="form-row">
+      <input type="text" formControlName="subject" class="form-control" placeholder="Subject">
+      <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched" class="error-message">
+        Subject is required.
+      </div>
+    </div>
+
+    <div class="form-row">
+      <textarea formControlName="message" class="form-control" placeholder="Message"></textarea>
+      <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error-message">
+        Message is required.
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="recaptcha-box">
+        <!-- reCAPTCHA goes here -->
+        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <button type="submit" class="form-submit" [disabled]="contactForm.invalid">Send message</button>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+</body>

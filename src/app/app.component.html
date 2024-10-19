@@ -8,24 +8,26 @@
     <div class="header-image">
       <img src="https://lmpixels.com/wp/kerge-wp/wp-content/uploads/2022/11/cesar-rincon.jpg" alt="Luka Jeremic"/>
     </div>
-    <div class="site-title">Luka Jeremić</div>
+    <div class="site-title">Luka<br/>Jeremić</div>
     <ul>
-      <li (click)="selectPage('about')">About Me</li>
-      <li (click)="selectPage('resume')">Resume</li>
-      <li (click)="selectPage('portfolio')">Portfolio</li>
-      <!--      <li (click)="selectPage('blog')">Blog</li>-->
-      <li (click)="selectPage('contact')">Contact</li>
+      <li (click)="selectPage('about')" [ngClass]="{'selected': selectedPage === 'about'}">About Me</li>
+      <li (click)="selectPage('resume')" [ngClass]="{'selected': selectedPage === 'resume'}">Resume</li>
+      <li (click)="selectPage('portfolio')" [ngClass]="{'selected': selectedPage === 'portfolio'}">Portfolio</li>
+      <li (click)="selectPage('contact')" [ngClass]="{'selected': selectedPage === 'contact'}">Contact</li>
     </ul>
 
     <div class="social-links" (click)="openGit()">
-      <a (click)="openGit()"><i class="fa-brands fa-github logos" ></i></a>
+      <a (click)="openGit()"><i class="fa-brands fa-github logos" style="padding-right: 20px"></i></a>
       <a (click)="openLinkedIn()"><i class="fa-brands fa-linkedin logos" ></i></a>
     </div>
   </div>
 
   <div class="right-panel">
     <ng-container *ngIf="selectedPage === 'about'">
-      <app-about></app-about>
+<!--      <app-about></app-about>-->
+<!--      <app-resume></app-resume>-->
+<!--      <app-portfolio></app-portfolio>-->
+      <app-contact></app-contact>
     </ng-container>
     <ng-container *ngIf="selectedPage === 'resume'">
       <app-resume></app-resume>

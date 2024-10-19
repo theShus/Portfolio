@@ -13,7 +13,6 @@ export class AppComponent {
   }
 
   openGit() {
-    console.log("kurac")
     window.open("https://github.com/theShus", 'https://github.com/theShus');
   }
 

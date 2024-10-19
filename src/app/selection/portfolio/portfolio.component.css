@@ -1,0 +1,137 @@
+body {
+  background-color: white;
+  padding-top: 50px;
+  margin: -10px 0 0 0;
+  min-height: 100vh;
+}
+
+hr {
+  width: 90.5%;
+  opacity: 0.2;
+  margin-top: -25px;
+}
+
+.heading {
+  margin-left: 90px;
+  font-size: 40px;
+  color: #444444;
+}
+
+/* Portfolio Filter */
+.portfolio-filters {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  justify-content: right;
+  scale: 80%;
+  margin-right: -20px;
+  margin-bottom: 30px;
+}
+
+.portfolio-filters li {
+  cursor: pointer;
+}
+
+.portfolio-filters li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+}
+
+.portfolio-filters li.active a {
+  color: #0099e5;
+  border: 1px solid #0099e5;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio-item {
+  width: 430px;
+  position: relative;
+  border-radius: 8px;
+}
+
+.portfolio-img-container {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  border-radius: 8px;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-img-container:hover .portfolio-img {
+  transform: scale(1.2); /* Zoom in on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.portfolio-img-container:hover .overlay {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay on hover */
+}
+
+/* Title is now always visible */
+.title {
+  /*font-size: 1.2rem;*/
+  color: #fff;
+  font-weight: bold;
+  margin: 10px;
+  text-align: left;
+  position: absolute;
+  top: 10px;
+  z-index: 2; /* Ensure it stays on top of the image */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: background to improve readability */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Category label appears on hover */
+.category {
+  font-size: 0.9rem;
+  color: #fff;
+  margin: 10px;
+  flex-direction: column;
+  text-align: left;
+  z-index: 2;
+  align-self: flex-end; /* Align category label at the bottom-left */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.portfolio-img-container:hover .category {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+  .portfolio-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-item {
+    width: 100%;
+  }
+}

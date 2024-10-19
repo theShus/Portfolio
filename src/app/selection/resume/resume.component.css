@@ -1,0 +1,136 @@
+body {
+  background-color: white;
+  padding-top: 50px;
+  margin: -10px 0 0 0;
+}
+
+hr {
+  width: 90.5%;
+  opacity: 0.2;
+  margin-top: -25px;
+}
+
+.heading {
+  margin-left: 90px;
+  font-size: 40px;
+  color: #444444;
+}
+
+/* General Timeline Styling */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /*border: red 2px solid;*/
+}
+
+.block-title {
+  margin-left: 100px;
+  margin-top: 50px;
+  font-size: 23px;
+  color: #444444;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #0099e5;
+}
+
+.block {
+  /*border: #1d5e2b 2px solid;*/
+  overflow: hidden;
+  height: 230px;
+  /*padding-top: -200px;*/
+  /*margin-left: -50px;*/
+}
+
+
+.left-part {
+  width: 25%;
+  text-align: right;
+  position: relative;
+  padding-right: 20px;
+}
+
+.right-part {
+  width: 65%;
+  padding-left: 50px;
+  border-radius: 8px;
+}
+
+.item-period {
+  font-weight: bold;
+  color: #3d3d3d;
+  font-size: 1.2rem;
+}
+
+.item-company {
+  display: block;
+  margin-top: -30px;
+  font-size: 1rem;
+  color: #999;
+}
+
+.item-title {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #3d3d3d;
+}
+
+.text p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.timeline-item {
+  display: flex;
+  position: relative; /* Needed to position the vertical line */
+}
+
+/* Vertical Line todo the line moves when you zoom in or out */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 26.5%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  height: 150px;
+  background-color: #e0e0e0; /* Light gray color for the vertical line */
+}
+
+/* Circle on the line */
+.timeline-item .left-part::before {
+  content: "";
+  position: absolute;
+  right: -16px; /* Position the circle closer to the right edge */
+  top: 38px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 3px solid #0099e5;
+  border-radius: 50%;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .left-part,
+  .right-part {
+    width: 100%;
+    text-align: left;
+  }
+
+  .timeline-item::before {
+    display: none;
+  }
+
+  .timeline-item .left-part::after {
+    right: 50%; /* Center the circle in mobile view */
+    transform: translateX(50%);
+  }
+}

@@ -1,1 +1,28 @@
-<p>portfolio works!</p>
+<head>
+  <title>Portfolio</title>
+</head>
+<body>
+<h1 class="heading">Portfolio</h1>
+<hr>
+
+<ul class="portfolio-filters">
+  <li (click)="selectTab('All')" [ngClass]="{'active': selectedTab === 'All'}"><a class="filter" data-group="category_all">All</a></li>
+  <li (click)="selectTab('Full-Stack')" [ngClass]="{'active': selectedTab === 'Full-Stack'}"><a data-group="category_media">Full-Stack</a></li>
+  <li (click)="selectTab('Mobile')" [ngClass]="{'active': selectedTab === 'Mobile'}"><a data-group="category_mockups">Mobile</a></li>
+  <li (click)="selectTab('Gaming')" [ngClass]="{'active': selectedTab === 'Gaming'}"><a data-group="category_soundcloud">Gaming</a></li>
+</ul>
+
+<div class="portfolio-grid">
+  <figure *ngFor="let item of portfolioItems" [attr.data-groups]="item.categories" class="portfolio-item">
+    <div class="portfolio-img-container">
+      <img [src]="item.imageUrl" [alt]="item.altText" class="portfolio-img">
+      <a [href]="item.linkUrl" [ngClass]="item.linkType"></a>
+      <h4 class="title">{{ item.title }}</h4>
+      <div class="overlay">
+        <span class="category">{{ item.categoryLabel }}</span>
+      </div>
+    </div>
+  </figure>
+</div>
+
+</body>

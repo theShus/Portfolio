@@ -1,0 +1,133 @@
+body {
+  background-color: white;
+  padding-top: 50px;
+  margin: -10px 0 0 0;
+  min-height: 100vh;
+}
+
+hr {
+  width: 90.5%;
+  opacity: 0.2;
+  margin-top: -25px;
+}
+
+.heading {
+  margin-left: 90px;
+  font-size: 40px;
+  color: #444444;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon{
+  color: #313131;
+  font-size: 30px;
+}
+
+.contact-card h4 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-card span {
+  font-size: 14px;
+  color: #666;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.form-submit[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contact-form {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0099e5;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+}
+
+textarea.form-control {
+  width: 100%;
+  resize: none;
+  height: 150px;
+}
+
+.form-submit {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: 2px solid #0099e5;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 10px;
+}
+
+.form-submit:hover {
+  background-color: #0099e5;
+  color: white;
+}
