@@ -1,4 +1,5 @@
-import { Component, AfterViewInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit, ElementRef, Renderer2, ViewChild } from '@angular/core';
+
 declare var $: any;
 
 @Component({
@@ -6,10 +7,16 @@ declare var $: any;
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements AfterViewInit{
+export class AboutComponent implements AfterViewInit, OnInit {
 
-  jobTitle: string = "FullStack"
+  jobTitle: string = ""
+  jobTitles: string[] = ['Full-Stack Developer', 'DevOps Engineer'];
+  currentIndex: number = 0;
+  fadeOut: boolean = false;
 
+  @ViewChild('animatedText') animatedText!: ElementRef;
+  constructor(private renderer: Renderer2) {
+  }
 
   ngAfterViewInit() {
     $('.owl-carousel').owlCarousel({
@@ -36,4 +43,27 @@ export class AboutComponent implements AfterViewInit{
       }
     });
   }
+
+  ngOnInit(): void {
+    this.jobTitle = this.jobTitles[this.currentIndex]
+    this.rotateJobTitles()
+  }
+
+  rotateJobTitles() {
+    setInterval(() => {
+      // Fade out
+      this.renderer.setStyle(this.animatedText.nativeElement, 'opacity', '0');
+
+      setTimeout(() => {
+        // Change the job title after fade out
+        this.currentIndex = (this.currentIndex + 1) % this.jobTitles.length;
+        this.jobTitle = this.jobTitles[this.currentIndex];
+
+        // Fade in
+        this.renderer.setStyle(this.animatedText.nativeElement, 'opacity', '1');
+      }, 500); // Wait for 0.5s (matching the CSS transition time) before showing new text
+
+    }, 2500); // Change text every 3 seconds
+  }
+
 }
