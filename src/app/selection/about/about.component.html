@@ -1,19 +1,25 @@
 <head>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" type="text/css">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        type="text/css">
 </head>
 <body>
 <div class="section-content">
   <div class="about-container">
     <div class="row">
       <div class="profile-image">
-        <img src="https://lmpixels.com/wp/kerge-wp/wp-content/uploads/2022/11/cesar-rincon.jpg" alt="Luka Jeremic" />
+        <img src="https://lmpixels.com/wp/kerge-wp/wp-content/uploads/2022/11/cesar-rincon.jpg" alt="Luka Jeremic"/>
       </div>
       <div class="col-md-6">
-        <div class="hp-text-block">
-          <h3>Frontend-developer</h3>
+        <div class="hp-text-block" style="width: 80%">
+          <div>{{jobTitle}}</div>
           <h2 class="hp-main-title">Luka Jeremić</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. .</p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. .</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.</p>
           <div class="hp-buttons">
             <a href="#" class="btn btn-primary">Download CV</a>
             <a href="#" class="btn btn-secondary">Contact</a>
@@ -23,27 +29,59 @@
     </div>
   </div>
 
-  <!-- What I Do Section -->
   <div class="what-i-do">
     <h3>What I Do</h3>
-    <div class="services">
+    <div>
       <div class="service">
-        <i aria-hidden="true" class="lnr lnr-store"></i>
-        <h4>Ecommerce</h4>
-        <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan...</p>
+        <a><i class="fa-solid fa-code logos"></i></a>
+        <div class="inner-service">
+          <h4>Programmer</h4>
+          <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies
+            ex lectus scelerisque nibh. Ut non sodales odio.</p>
+        </div>
       </div>
       <div class="service">
-        <i class="lnr lnr-laptop-phone"></i>
-        <h4>Web Design</h4>
-        <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan...</p>
+        <a><i class="fa-solid fa-laptop-code logos"></i></a>
+        <div class="inner-service">
+          <h4>Fullstack</h4>
+          <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies
+            ex lectus scelerisque nibh. Ut non sodales odio.</p>
+        </div>
       </div>
       <div class="service">
-        <i class="lnr lnr-pencil"></i>
-        <h4>Copywriter</h4>
-        <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan...</p>
+        <a><i class="fa-solid fa-network-wired logos"></i></a>
+        <div class="inner-service">
+          <h4>Dev Ops</h4>
+          <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies
+            ex lectus scelerisque nibh. Ut non sodales odio.</p>
+        </div>
+      </div>
+      <div class="service">
+        <a><i class="fa-solid fa-folder-open logos"></i></a>
+        <div class="inner-service">
+          <h4>Organization</h4>
+          <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies
+            ex lectus scelerisque nibh. Ut non sodales odio.</p>
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="owl-carousel-wrapper">
+    <div class="owl-carousel owl-theme">
+      <div class="item"><i class="fa-brands fa-angular carousel-item"></i></div>
+      <div class="item"><i class="fa-brands fa-java carousel-item"></i></div>
+      <div class="item"><i class="fa-solid fa-c carousel-item"></i> <i class="fa-solid fa-hashtag carousel-item"></i></div>
+      <div class="item"><i class="fa-brands fa-js carousel-item"></i></div>
+      <div class="item"><i class="fa-brands fa-docker carousel-item"></i></div>
+      <div class="item"><i class="fa-solid fa-database carousel-item"></i></div>
+      <div class="item"><i class="fa-brands fa-github carousel-item"></i></div>
+      <div class="item"><i class="fa-brands fa-vuejs carousel-item"></i></div>
+      <div class="item"><i class="fa-brands fa-android carousel-item"></i></div>
+    </div>
+  </div>
+
+
 </div>
 
 </body>
