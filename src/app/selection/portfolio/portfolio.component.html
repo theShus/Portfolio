@@ -13,10 +13,10 @@
 </ul>
 
 <div class="portfolio-grid">
-  <figure *ngFor="let item of portfolioItems" [attr.data-groups]="item.categories" class="portfolio-item">
+  <figure (click)="openProjectDetails(item.id)" *ngFor="let item of portfolioService.portfolioItems" class="portfolio-item">
     <div class="portfolio-img-container">
-      <img [src]="item.imageUrl" [alt]="item.altText" class="portfolio-img">
-      <a [href]="item.linkUrl" [ngClass]="item.linkType"></a>
+      <img [src]="item.imageUrl" class="portfolio-img">
+<!--      <a [href]="item.linkUrl" [ngClass]="item.linkType"></a>-->
       <h4 class="title">{{ item.title }}</h4>
       <div class="overlay">
         <span class="category">{{ item.categoryLabel }}</span>

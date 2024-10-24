@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {EmailService} from "../../../services/email.service";
+import emailjs from "@emailjs/browser";
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +13,7 @@ export class ContactComponent {
   contactForm: FormGroup;
 
 
-  constructor() {
+  constructor(private emailService: EmailService) {
     this.contactForm = new FormGroup({
       fullName: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -22,11 +24,16 @@ export class ContactComponent {
 
   onSubmit() {
     if (this.contactForm.valid) {
+      const formData = this.contactForm.value;
 
+      this.emailService.sendEmail(
+        formData.fullName,
+        formData.email,
+        formData.subject,
+        formData.message
+      )
+
+      this.contactForm.reset()
     }
-    else {
-
-    }
-
   }
 }

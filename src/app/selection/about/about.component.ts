@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, OnInit, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import {Router} from "@angular/router";
 
 declare var $: any;
 
@@ -15,7 +16,7 @@ export class AboutComponent implements AfterViewInit, OnInit {
   fadeOut: boolean = false;
 
   @ViewChild('animatedText') animatedText!: ElementRef;
-  constructor(private renderer: Renderer2) {
+  constructor(private renderer: Renderer2, public router: Router) {
   }
 
   ngAfterViewInit() {
@@ -65,5 +66,14 @@ export class AboutComponent implements AfterViewInit, OnInit {
 
     }, 2500); // Change text every 3 seconds
   }
+
+  downloadCv(){
+    const link = document.createElement("a")
+    link.href = 'src/assets/Luka_Jeremic_CV.pdf'
+    link.download = "Luka_Jeremic_CV.pdf"
+    link.click()
+  }
+
+
 
 }

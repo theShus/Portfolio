@@ -1,0 +1,47 @@
+{
+  "portfolioItems": [
+    {
+      "id": 1,
+      "title": "Cuttle Project",
+      "imageUrl": [
+        "assets/cuttle/cuttle1.png",
+        "assets/cuttle/cuttle2.png",
+        "assets/cuttle/cuttle3.png",
+        "assets/cuttle/cuttle4.png"
+      ],
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "PostgreSQL",
+        "Java",
+        "Spring",
+        "WebSocket,",
+        "StompJs,"
+      ],
+      "linkUrl": "https://cuttle-front-docker.onrender.com",
+      "people": "Luka Jeremic",
+      "date": "21-11-2023",
+      "categoryLabel": "Full-Stack",
+      "description": "test description"
+    },
+    {
+      "id": 2,
+      "title": "Cuttle Project 2",
+      "imageUrl": [
+        "assets/cuttle/cuttle3.png",
+        "assets/cuttle/cuttle4.png"
+      ],
+      "technologies": [
+        "React",
+        "JavaScript",
+        "Node.js",
+        "MongoDB"
+      ],
+      "linkUrl": "https://example.com/project2",
+      "people": "Alice Johnson, Mark Brown",
+      "date": "2024-08-05",
+      "categoryLabel": "Full Stack Development",
+      "description": "test description"
+    }
+  ]
+}
