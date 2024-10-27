@@ -4,6 +4,6 @@ export const environment = {
   emailJsServiceId: 'resume_service',
   emailJsTemplateId: 'resume_template',
 
-  projectJson: 'assets/projects.json'
+  projectJson: 'assets/PortfolioItems.json'
 };
 

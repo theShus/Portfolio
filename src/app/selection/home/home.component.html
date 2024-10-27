@@ -22,12 +22,9 @@
     </div>
   </div>
 
-  <div class="right-panel">
+  <div class="right-panel" [ngClass]="currentAnimation">
     <ng-container *ngIf="selectedPage === 'about'">
       <app-about></app-about>
-      <!--      <app-resume></app-resume>-->
-      <!--      <app-portfolio></app-portfolio>-->
-      <!--      <app-contact></app-contact>-->
     </ng-container>
     <ng-container *ngIf="selectedPage === 'resume'">
       <app-resume></app-resume>

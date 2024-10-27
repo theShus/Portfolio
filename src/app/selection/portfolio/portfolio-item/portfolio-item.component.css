@@ -18,8 +18,18 @@ body {
 
 .carousel-container {
   position: relative;
-  width: 45%;
-  margin-left: 350px;
+  width: 50%;
+  margin-left: 300px;
+  overflow: hidden;
+  background-color: red;
+}
+
+.carousel-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .carousel-item {

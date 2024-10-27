@@ -7,10 +7,26 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   selectedPage: string = 'about';
+  currentAnimation: string = '';
+  animationType: string = 'right';
 
   selectPage(page: string) {
-    this.selectedPage = page;
+    if (this.selectedPage !== page) {
+      // Randomly choose "left" or "down" animation and store it
+      this.animationType = Math.random() < 0.5 ? 'right' : 'down';
+
+      // Apply the "out" animation based on the chosen type
+      this.currentAnimation = this.animationType === 'right' ? 'swipe-right-out' : 'swipe-down-out';
+
+      setTimeout(() => {
+        // Update the selected page and apply the corresponding "in" animation
+        this.selectedPage = page;
+        this.currentAnimation = this.animationType === 'right' ? 'swipe-right-in' : 'swipe-down-in';
+      }, 200); // Duration should match animation duration in CSS
+    }
   }
+
+
 
   openGit() {
     window.open("https://github.com/theShus", 'https://github.com/theShus');

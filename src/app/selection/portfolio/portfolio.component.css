@@ -45,9 +45,10 @@ hr {
 
 /* Portfolio Grid */
 .portfolio-grid {
+  margin-left: 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 .portfolio-item {
@@ -61,11 +62,14 @@ hr {
   overflow: hidden;
   height: 280px;
   border-radius: 8px;
+  display: flex;
 }
 
 .portfolio-img {
   width: 100%;
   height: auto;
+  scale: 100%;
+  object-fit: cover;
   transition: transform 0.5s ease;
 }
 

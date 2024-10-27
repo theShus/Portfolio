@@ -1,7 +1,7 @@
 export interface PortfolioItem {
   id: number;
   title: string;
-  imageUrl: string[];
+  imageUrls: string[];
   technologies: string[];
   linkUrl: string;
   people: string;

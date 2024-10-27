@@ -1,5 +1,8 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {PortfolioItem} from "../models/models";
+import {map, Observable} from "rxjs";
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -7,22 +10,40 @@ import {PortfolioItem} from "../models/models";
 export class PortfolioService {
   portfolioItems: PortfolioItem[] = [];
 
-  constructor() {}
-
-  // Method to load data from JSON using fetch API
-  loadPortfolioItems(): Promise<void> {//todo ne uspeva da parsira json
-    return fetch('assets/portfolio-items.json')
-      .then(response => response.json())
-      .then(data => {
-        this.portfolioItems = data.portfolioItems;  // Assuming the structure in the JSON has a key 'portfolioItems'
-      })
-      .catch(error => {
-        console.error('Error loading JSON:', error);
-      });
+  constructor(private httpClient: HttpClient) {
+    this.loadPortfolioItems()
   }
 
-  // Method to get a single portfolio item by id
-  getPortfolioItemById(id: number): PortfolioItem | undefined {
-    return this.portfolioItems.find(item => item.id === id);
+  loadPortfolioItems()  {
+    this.fetchPortfolioItems().subscribe(items => {
+      this.portfolioItems = items;
+    });
   }
+
+  fetchPortfolioItems(): Observable<PortfolioItem[]> {
+    return this.httpClient.get<{ portfolioItems: PortfolioItem[] }>(environment.projectJson).pipe(
+      map(response => response.portfolioItems)
+    );
+  }
+
+  getPortfolioItemById(id: number): any{
+    return this.portfolioItems.find(item => item.id === id)
+  }
+
+  private parsePortfolioItem(data: any): PortfolioItem {
+    return {
+      id: data.id,
+      title: data.title,
+      imageUrls: data.imageUrl,
+      technologies: data.technologies,
+      linkUrl: data.linkUrl,
+      people: data.people,
+      date: data.date,
+      categoryLabel: data.categoryLabel,
+      description: data.description
+    };
+  }
+
+
+
 }

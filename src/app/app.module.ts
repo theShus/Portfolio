@@ -10,6 +10,7 @@ import { ContactComponent } from './selection/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PortfolioItemComponent } from './selection/portfolio/portfolio-item/portfolio-item.component';
 import { HomeComponent } from './selection/home/home.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HomeComponent } from './selection/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

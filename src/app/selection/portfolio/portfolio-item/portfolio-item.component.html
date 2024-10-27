@@ -9,9 +9,9 @@
   <button class="close-button" (click)="router.navigate([''])">&#10006;</button> <!-- HTML character for 'X' -->
 
   <div (mouseover)="buttonsVisible=false" (mouseout)="buttonsVisible=true" class="carousel-container">
-    <div class="carousel">
-      <div class="carousel-item" *ngFor="let slide of slides; let i = index" [ngClass]="{ 'active': i === currentSlideIndex }">
-        <img [src]="slide.imageUrl" [alt]="slide.altText" />
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let slide of this.portfolioItem.imageUrls; let i = index" [ngClass]="{ 'active': i === currentSlideIndex }">
+        <img [src]="slide" [alt]="slide" />
       </div>
     </div>
 
@@ -19,7 +19,7 @@
     <button [hidden]="buttonsVisible" class="next" (click)="moveSlide(1)">&#10095;</button>
 
     <div class="carousel-dots">
-      <span *ngFor="let slide of slides; let i = index" class="dot" [ngClass]="{ 'active': i === currentSlideIndex }" (click)="goToSlide(i)"></span>
+      <span *ngFor="let slide of this.portfolioItem.imageUrls; let i = index" class="dot" [ngClass]="{ 'active': i === currentSlideIndex }" (click)="goToSlide(i)"></span>
     </div>
   </div>
 

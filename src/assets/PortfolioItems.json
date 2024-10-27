@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Cuttle Project",
-      "imageUrl": [
+      "imageUrls": [
         "assets/cuttle/cuttle1.png",
         "assets/cuttle/cuttle2.png",
         "assets/cuttle/cuttle3.png",
@@ -27,7 +27,7 @@
     {
       "id": 2,
       "title": "Cuttle Project 2",
-      "imageUrl": [
+      "imageUrls": [
         "assets/cuttle/cuttle3.png",
         "assets/cuttle/cuttle4.png"
       ],

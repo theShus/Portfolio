@@ -15,8 +15,7 @@
 <div class="portfolio-grid">
   <figure (click)="openProjectDetails(item.id)" *ngFor="let item of portfolioService.portfolioItems" class="portfolio-item">
     <div class="portfolio-img-container">
-      <img [src]="item.imageUrl" class="portfolio-img">
-<!--      <a [href]="item.linkUrl" [ngClass]="item.linkType"></a>-->
+      <img [src]="item.imageUrls[0]" class="portfolio-img">
       <h4 class="title">{{ item.title }}</h4>
       <div class="overlay">
         <span class="category">{{ item.categoryLabel }}</span>
@@ -24,5 +23,6 @@
     </div>
   </figure>
 </div>
+
 
 </body>
