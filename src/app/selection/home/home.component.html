@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div class="right-panel" [ngClass]="currentAnimation">
+  <div class="right-panel" id="rightPanel" [ngClass]="currentAnimation">
     <ng-container *ngIf="selectedPage === 'about'">
       <app-about></app-about>
     </ng-container>
