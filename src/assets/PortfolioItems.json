@@ -21,7 +21,7 @@
       ],
       "linkUrl": "https://cuttle-front-docker.onrender.com",
       "gitUrls": ["https://github.com/theShus/Cuttle_Back", "https://github.com/theShus/Cuttle_Front"],
-      "people": "Luka Jeremic",
+      "people": "Luka Jeremić",
       "date": "21-11-2023",
       "categoryLabel": "Full-Stack",
       "description": "Developed a multi-player web application designed for up to four participants. Utilizing coordinate tracking and DOM tree filtering to build an iteractive UI. The application operates in real-time, with gameplay and visual updates facilitated through a multi-socket system, ensuring continuous data synchronization across multiple players.and is backed by a central server."
@@ -69,7 +69,7 @@
       "gitUrls": [
         "https://github.com/theShus/Video_player"
       ],
-      "people": "Luka Jeremic",
+      "people": "Luka Jeremić",
       "date": "11.13.2023",
       "categoryLabel": "Mobile",
       "description": "This is a demo app that collects videos (currently set to music) from the Vimeo API and displays them in a RecyclerView. The app consists of two parts:\n Regular XML App: A traditional Android app using XML-based UI.\n    Compose App: An Android app using Jetpack Compose for UI.\n\nFunctionality\n\nThe app provides the following functionalities:\n    Automatic Loading: The app automatically loads 20 videos on the first launch.\n    Lazy Loading: Additional videos are loaded when the user scrolls to the bottom of the list.\n    Detailed View: Clicking on a video opens a detailed description of it and simultaneously opens a player.\n    Two App Versions: The app has both traditional XML-based UI and Jetpack Compose-based UI.\n\nSwapping Between Apps\nTo swap between the two versions of the app, press the floating action button."
@@ -86,7 +86,7 @@
       ],
       "linkUrl": "-",
       "gitUrls": ["https://github.com/theShus/K_means_clustering_waste_sites"],
-      "people": "Luka Jeremic",
+      "people": "Luka Jeremić",
       "date": "01.02.2024",
       "categoryLabel": "Full-Stack",
       "description": "This Java project utilizes the K-means clustering algorithm to find the optimal placement of processing plants across Europe. The primary objective is to minimize the distance between waste accumulation sites (garbage collection facilities) and processing plants, enhancing the efficiency of waste management.\n\nContext\nIn Europe, various locations serve as garbage collection facilities, each with a specific annual capacity measured in tonnes. This capacity represents the amount of waste accumulated annually at each site. The project aims to determine the sub-optimal placement of a given number of processing plants to efficiently process this accumulated waste.\n\nK-Means Clustering\nK-means clustering is a fundamental algorithm in the field of clustering. It segregates a given dataset into a specified number (k) of clusters, optimizing the intra-cluster variance. In this project, the algorithm is tailored to handle GPS coordinates of locations in Europe, clustering them based on their proximity and capacity for waste accumulation."
@@ -106,7 +106,7 @@
       ],
       "linkUrl": "-",
       "gitUrls": ["https://github.com/theShus/DockerSwarmvsKubernetesResearchProject"],
-      "people": "Luka Jeremic",
+      "people": "Luka Jeremić",
       "date": "01.09.2024",
       "categoryLabel": "Research",
       "description": ""
