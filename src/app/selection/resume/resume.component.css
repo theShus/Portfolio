@@ -36,11 +36,8 @@ hr {
 }
 
 .block {
-  /*border: #1d5e2b 2px solid;*/
   overflow: hidden;
-  height: 230px;
-  /*padding-top: -200px;*/
-  /*margin-left: -50px;*/
+  height: auto;
 }
 
 
@@ -96,7 +93,7 @@ hr {
   top: 0;
   bottom: 0;
   width: 2px;
-  height: 150px;
+  height: auto;
   background-color: #e0e0e0; /* Light gray color for the vertical line */
 }
 

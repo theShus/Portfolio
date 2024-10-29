@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {PortfolioService} from "../../../services/portfolio.service";
+import {PortfolioItem} from "../../../models/models";
 
 @Component({
   selector: 'app-portfolio',
@@ -9,21 +10,34 @@ import {PortfolioService} from "../../../services/portfolio.service";
 })
 export class PortfolioComponent implements OnInit{
 
-  selectedTab: string = 'All'; //todo uradi filtriranje projekata
+  selectedTab: string = 'All';
+  filteredItems: PortfolioItem[] = [];
 
   constructor(private router: Router, public portfolioService: PortfolioService) {
   }
 
   ngOnInit(): void {
-    this.portfolioService.loadPortfolioItems()
-  }
-
-  selectTab(tab: string) {
-    this.selectedTab = tab;
+    this.portfolioService.fetchPortfolioItems().subscribe(items => {
+      this.portfolioService.portfolioItems = items;
+      this.updateFilteredItems();
+    });
   }
 
   openProjectDetails(projectId: number){
     this.router.navigate(['/portfolio-item', projectId])
+  }
+
+  selectTab(tab: string) {
+    this.selectedTab = tab;
+    this.updateFilteredItems();
+  }
+
+  private updateFilteredItems() {
+    if (this.selectedTab === 'All') {
+      this.filteredItems = this.portfolioService.portfolioItems;
+    } else {
+      this.filteredItems = this.portfolioService.portfolioItems.filter(item => item.categoryLabel === this.selectedTab);
+    }
   }
 
 }

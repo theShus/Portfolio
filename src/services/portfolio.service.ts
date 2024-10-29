@@ -11,7 +11,7 @@ export class PortfolioService {
   portfolioItems: PortfolioItem[] = [];
 
   constructor(private httpClient: HttpClient) {
-    this.loadPortfolioItems()
+    // this.loadPortfolioItems()
   }
 
   loadPortfolioItems()  {
@@ -26,24 +26,9 @@ export class PortfolioService {
     );
   }
 
+
   getPortfolioItemById(id: number): any{
     return this.portfolioItems.find(item => item.id === id)
   }
-
-  private parsePortfolioItem(data: any): PortfolioItem {
-    return {
-      id: data.id,
-      title: data.title,
-      imageUrls: data.imageUrl,
-      technologies: data.technologies,
-      linkUrl: data.linkUrl,
-      people: data.people,
-      date: data.date,
-      categoryLabel: data.categoryLabel,
-      description: data.description
-    };
-  }
-
-
 
 }
