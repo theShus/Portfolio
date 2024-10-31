@@ -120,6 +120,10 @@ html, body {
   cursor: pointer;
 }
 
+.logos:hover{
+  color: #0099e5;
+}
+
 .left-panel .footer {
   margin-top: 20px;
   font-size: 14px;
