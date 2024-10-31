@@ -1,7 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 import {PortfolioItem} from "../../../../models/models";
-import {PortfolioService} from "../../../../services/portfolio.service";
 
 @Component({
   selector: 'app-portfolio-item',
@@ -10,29 +9,23 @@ import {PortfolioService} from "../../../../services/portfolio.service";
 })
 export class PortfolioItemComponent implements OnInit{
 
-  portfolioItem: PortfolioItem | any
+  project: PortfolioItem | any;
 
   buttonsVisible = false
   currentSlideIndex = 0;
 
-  constructor(public router: Router, private portfolioService: PortfolioService, private route: ActivatedRoute) { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id')!;  // Extract the id from the route
-    this.portfolioItem = this.portfolioService.getPortfolioItemById(id)
-
-    if (this.portfolioItem == undefined){
-      this.router.navigate([''])
-    }
+    this.project = history.state.project;
   }
 
   moveSlide(step: number) {
-    const totalSlides = this.portfolioItem.imageUrls.length;
+    const totalSlides = this.project.imageUrls.length;
     this.currentSlideIndex = (this.currentSlideIndex + step + totalSlides) % totalSlides; // Handle wrapping around
   }
 
   goToSlide(index: number) {
     this.currentSlideIndex = index;
   }
-
 }

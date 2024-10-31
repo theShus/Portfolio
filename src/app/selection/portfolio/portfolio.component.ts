@@ -24,7 +24,8 @@ export class PortfolioComponent implements OnInit{
   }
 
   openProjectDetails(projectId: number){
-    this.router.navigate(['/portfolio-item', projectId])
+    const project = this.portfolioService.getPortfolioItemById(projectId)
+    this.router.navigate(['/portfolio-item', projectId],  { state: { project } })
   }
 
   selectTab(tab: string) {

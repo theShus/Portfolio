@@ -67,11 +67,11 @@ export class AboutComponent implements AfterViewInit, OnInit {
     }, 2500); // Change text every 3 seconds
   }
 
-  downloadCv(){
-    const link = document.createElement("a")
-    link.href = 'src/assets/Luka_Jeremic_CV.pdf'
-    link.download = "Luka_Jeremic_CV.pdf"
-    link.click()
+  viewCv(){
+    const link = document.createElement("a");
+    link.href = 'assets/Luka_Jeremic_CV.pdf';
+    link.target = "_blank"; // Open in new tab
+    link.click();
   }
 
 

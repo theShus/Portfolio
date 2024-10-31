@@ -2,56 +2,57 @@
   <title>Portfolio-Item</title>
 </head>
 <body>
-<h1 class="heading">{{portfolioItem?.title}}</h1>
+<h1 class="heading">{{project?.title}}</h1>
 
 <div class="carousel-and-description">
 
-  <button class="close-button" (click)="router.navigate([''])">&#10006;</button> <!-- HTML character for 'X' -->
-
   <div (mouseover)="buttonsVisible=false" (mouseout)="buttonsVisible=true" class="carousel-container">
     <div class="carousel-inner">
-      <div class="carousel-item"  style="background-color: white" *ngFor="let slide of this.portfolioItem.imageUrls; let i = index"
+      <div class="carousel-item"  style="background-color: white" *ngFor="let slide of this.project.imageUrls; let i = index"
            [ngClass]="{ 'active': i === currentSlideIndex }">
         <img [src]="slide" [alt]="slide"/>
       </div>
     </div>
-
     <button [hidden]="buttonsVisible" class="prev" (click)="moveSlide(-1)">&#10094;</button>
     <button [hidden]="buttonsVisible" class="next" (click)="moveSlide(1)">&#10095;</button>
 
     <div class="carousel-dots">
-      <span *ngFor="let slide of this.portfolioItem.imageUrls; let i = index" class="dot"
+      <span *ngFor="let slide of this.project.imageUrls; let i = index" class="dot"
             [ngClass]="{ 'active': i === currentSlideIndex }" (click)="goToSlide(i)"></span>
     </div>
   </div>
 
-  <div class="description-container">
-    <h3 class="description-title">Description</h3>
-    <ul class="description-list">
-      <li><i class="fas fa-user listIcon"></i> {{portfolioItem.people}}</li>
-      <li>
-        <i class="fas fa-globe listIcon"></i>
-        <a href="{{portfolioItem?.linkUrl}}">{{portfolioItem?.linkUrl}}</a>
-      </li>
-      <li>
-        <i class="fa-brands fa-github listIcon"></i>
-        <ng-container *ngFor="let url of portfolioItem?.gitUrls">
-          <a [href]="url" class="link-item">{{url}}</a>
-        </ng-container>
-      </li>
+  <div class="right-box">
+    <button class="close-button" (click)="router.navigate([''])">&#10006;</button> <!-- HTML character for 'X' -->
+    <div class="description-container">
+      <h3 class="description-title">Description</h3>
+      <ul class="description-list">
+        <li><i class="fas fa-user listIcon"></i> {{project.people}}</li>
+        <li>
+          <i class="fas fa-globe listIcon"></i>
+          <a href="{{project?.linkUrl}}">{{project?.linkUrl}}</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-github listIcon"></i>
+          <ng-container *ngFor="let url of project?.gitUrls">
+            <a [href]="url" class="link-item">{{url}}</a>
+          </ng-container>
+        </li>
 
-      <li><i class="fas fa-calendar-alt listIcon"></i> {{portfolioItem?.date}}</li>
-    </ul>
+        <li><i class="fas fa-calendar-alt listIcon"></i> {{project?.date}}</li>
+      </ul>
 
-    <br>
-    <h3 class="technology-title">Technology</h3>
-    <ul class="technology-list">
-      <li *ngFor="let tech of portfolioItem?.technologies">{{ tech }}</li>
-    </ul>
+      <br>
+      <h3 class="technology-title">Technology</h3>
+      <ul class="technology-list">
+        <li *ngFor="let tech of project?.technologies">{{ tech }}</li>
+      </ul>
+    </div>
+
   </div>
 </div>
 
-<p class="project-description" style=" white-space: pre-line;">{{portfolioItem?.description}}</p>
+<p class="project-description" style=" white-space: pre-line;">{{project?.description}}</p>
 
 
 </body>

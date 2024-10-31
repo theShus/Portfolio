@@ -6,7 +6,7 @@ body {
 }
 
 .heading {
-  margin-left: 300px;
+  margin-left: 20%;
   font-size: 40px;
   color: #444444;
 }
@@ -20,7 +20,7 @@ body {
   position: relative;
   width: 50%;
   height: 100%;
-  margin-left: 300px;
+  margin-left: 20%;
   overflow: hidden;
   z-index: 3;
 }
@@ -98,9 +98,12 @@ body {
   font-family: 'Arial', sans-serif;
   color: #333;
   background-color: #fff;
+  margin-right: 50px;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  /*border: red 2px solid;*/
 }
 
 .description-title, .technology-title {
@@ -175,17 +178,20 @@ body {
   font-size: 20px;
   line-height: 1.6;
   width: 43%;
-  margin-left: 355px;
+  margin-left: 22%;
   color: #555;
   margin-top: 50px;
   margin-bottom: 20px;
   text-align: justify;  /* Makes the text evenly spaced on both sides */
 }
 
+.right-box {
+  margin-top: -50px;
+}
+
 .close-button {
-  position: absolute;
-  top: 11%;
-  right: 12.5%;
+  margin-bottom: 10px;
+  margin-left: 400px;
   background-color: rgba(211, 211, 211, 0.34);
   width: 40px;
   height: 40px;
