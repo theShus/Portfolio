@@ -3,10 +3,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" type="text/css">
 </head>
 <body>
+
+<button class="hamburger" (click)="toggleLeftPanel()">☰</button>
+
 <div class="container">
-  <div class="left-panel">
+  <div class="left-panel" [ngClass]="{ 'open': isPanelOpen }">
     <div class="header-image">
-      <img src="assets/small_main_image.jpg" alt="Luka Jeremic"/>
+      <img src="../../assets/small_main_image.jpg" alt="Luka Jeremic"/>
     </div>
     <div class="site-title">Luka<br/>Jeremić</div>
     <ul>
@@ -22,7 +25,7 @@
     </div>
   </div>
 
-  <div class="right-panel" id="rightPanel" [ngClass]="currentAnimation">
+  <div class="right-panel" id="rightPanel"  [ngClass]="currentAnimation">
     <ng-container *ngIf="selectedPage === 'about'">
       <app-about></app-about>
     </ng-container>

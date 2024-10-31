@@ -9,6 +9,7 @@ export class HomeComponent {
   selectedPage: string = 'about';
   currentAnimation: string = '';
   animationType: string = 'right';
+  isPanelOpen = false;
 
   selectPage(page: string) {
     if (this.selectedPage !== page) {
@@ -32,7 +33,12 @@ export class HomeComponent {
     }
   }
 
+  rightPanelMargin = '210px'; // Default margin when left panel is open
 
+  toggleLeftPanel() {
+    this.isPanelOpen = !this.isPanelOpen;
+    this.rightPanelMargin = this.isPanelOpen ? '210px' : '0'; // Change margin based on panel state
+  }
 
   openGit() {
     window.open("https://github.com/theShus", 'https://github.com/theShus');

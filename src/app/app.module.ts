@@ -9,7 +9,7 @@ import { PortfolioComponent } from './selection/portfolio/portfolio.component';
 import { ContactComponent } from './selection/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PortfolioItemComponent } from './selection/portfolio/portfolio-item/portfolio-item.component';
-import { HomeComponent } from './selection/home/home.component';
+import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
