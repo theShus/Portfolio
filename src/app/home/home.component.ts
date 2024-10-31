@@ -29,11 +29,8 @@ export class HomeComponent {
     }
   }
 
-  rightPanelMargin = '210px'; // Default margin when left panel is open
-
   toggleLeftPanel() {
     this.isPanelOpen = !this.isPanelOpen;
-    this.rightPanelMargin = this.isPanelOpen ? '210px' : '0'; // Change margin based on panel state
   }
 
   openGit() {
