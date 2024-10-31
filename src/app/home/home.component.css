@@ -136,28 +136,28 @@ body {
 
 /*SWAP ANIMATIONS*/
 
-/* Swipe In/Out Animations */
-@keyframes swipeDownIn {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+/*!* Swipe In/Out Animations *!*/
+/*@keyframes swipeDownIn {*/
+/*  from {*/
+/*    transform: translateY(-100%);*/
+/*    opacity: 0;*/
+/*  }*/
+/*  to {*/
+/*    transform: translateY(0);*/
+/*    opacity: 1;*/
+/*  }*/
+/*}*/
 
-@keyframes swipeDownOut {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-}
+/*@keyframes swipeDownOut {*/
+/*  from {*/
+/*    transform: translateY(0);*/
+/*    opacity: 1;*/
+/*  }*/
+/*  to {*/
+/*    transform: translateY(100%);*/
+/*    opacity: 0;*/
+/*  }*/
+/*}*/
 
 @keyframes swipeRightIn {
   from {
@@ -181,14 +181,14 @@ body {
   }
 }
 
-/* Add classes to apply the animations */
-.right-panel.swipe-down-in {
-  animation: swipeDownIn 0.5s forwards;
-}
+/*!* Add classes to apply the animations *!*/
+/*.right-panel.swipe-down-in {*/
+/*  animation: swipeDownIn 0.5s forwards;*/
+/*}*/
 
-.right-panel.swipe-down-out {
-  animation: swipeDownOut 0.5s forwards;
-}
+/*.right-panel.swipe-down-out {*/
+/*  animation: swipeDownOut 0.5s forwards;*/
+/*}*/
 
 .right-panel.swipe-right-in {
   animation: swipeRightIn 0.5s forwards;
