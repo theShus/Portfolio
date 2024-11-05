@@ -13,7 +13,7 @@ export class HomeComponent {
   selectPage(page: string) {
     if (this.selectedPage !== page) {
       // Apply the "out" animation based on the chosen type
-      this.currentAnimation = 'swipe-right-out' ;
+      this.currentAnimation = 'swipe-left-out';
 
       // Scroll to the top of the right panel when the page changes
       const rightPanel = document.getElementById('rightPanel');
@@ -24,7 +24,7 @@ export class HomeComponent {
       setTimeout(() => {
         // Update the selected page and apply the corresponding "in" animation
         this.selectedPage = page;
-        this.currentAnimation = 'swipe-right-in';
+        this.currentAnimation = 'swipe-left-in';
       }, 200); // Duration should match animation duration in CSS
     }
   }
@@ -40,5 +40,4 @@ export class HomeComponent {
   openLinkedIn() {
     window.open("https://www.linkedin.com/in/luka-jeremic-853399248/", 'https://www.linkedin.com/in/luka-jeremic-853399248/');
   }
-
 }
