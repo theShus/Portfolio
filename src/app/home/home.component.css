@@ -138,66 +138,35 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/*SWAP ANIMATIONS*/
 
-/*!* Swipe In/Out Animations *!*/
-/*@keyframes swipeDownIn {*/
-/*  from {*/
-/*    transform: translateY(-100%);*/
-/*    opacity: 0;*/
-/*  }*/
-/*  to {*/
-/*    transform: translateY(0);*/
-/*    opacity: 1;*/
-/*  }*/
-/*}*/
+/* SWAP ANIMATIONS */
 
-/*@keyframes swipeDownOut {*/
-/*  from {*/
-/*    transform: translateY(0);*/
-/*    opacity: 1;*/
-/*  }*/
-/*  to {*/
-/*    transform: translateY(100%);*/
-/*    opacity: 0;*/
-/*  }*/
-/*}*/
-
-@keyframes swipeRightIn {
+@keyframes swipeLeftIn {
   from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes swipeRightOut {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
     transform: translateX(100%);
     opacity: 0;
   }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-/*!* Add classes to apply the animations *!*/
-/*.right-panel.swipe-down-in {*/
-/*  animation: swipeDownIn 0.5s forwards;*/
-/*}*/
-
-/*.right-panel.swipe-down-out {*/
-/*  animation: swipeDownOut 0.5s forwards;*/
-/*}*/
-
-.right-panel.swipe-right-in {
-  animation: swipeRightIn 0.5s forwards;
+@keyframes swipeLeftOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 }
 
-.right-panel.swipe-right-out {
-  animation: swipeRightOut 0.5s forwards;
+.right-panel.swipe-left-in {
+  animation: swipeLeftIn 0.5s forwards;
+}
+
+.right-panel.swipe-left-out {
+  animation: swipeLeftOut 0.5s forwards;
 }
