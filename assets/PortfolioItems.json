@@ -1,0 +1,115 @@
+{
+  "portfolioItems": [
+    {
+      "id": 1,
+      "title": "Cuttle Project",
+      "thumbnail": "assets/Cuttle/cuttle3.png",
+      "imageUrls": [
+        "assets/Cuttle/cuttle1.png",
+        "assets/Cuttle/cuttle2.png",
+        "assets/Cuttle/cuttle3.png",
+        "assets/Cuttle/cuttle4.png"
+      ],
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "PostgreSQL",
+        "Java",
+        "Spring",
+        "WebSocket,",
+        "StompJs,"
+      ],
+      "linkUrl": "https://cuttle-front-docker.onrender.com",
+      "gitUrls": ["https://github.com/theShus/Cuttle_Back", "https://github.com/theShus/Cuttle_Front"],
+      "people": "Luka Jeremić",
+      "date": "21-11-2023",
+      "categoryLabel": "Full-Stack",
+      "description": "Developed a multi-player web application designed for up to four participants. Utilizing coordinate tracking and DOM tree filtering to build an iteractive UI. The application operates in real-time, with gameplay and visual updates facilitated through a multi-socket system, ensuring continuous data synchronization across multiple players.and is backed by a central server."
+    },
+    {
+      "id": 2,
+      "title": "Financial web application",
+      "thumbnail": "assets/Bank/bank2.png",
+      "imageUrls": [
+        "assets/Bank/bank1.png",
+        "assets/Bank/bank2.png",
+        "assets/Bank/bank3.png",
+        "assets/Bank/bank4.png",
+        "assets/Bank/bank5.png",
+        "assets/Bank/bank6.png",
+        "assets/Bank/bank7.png",
+        "assets/Bank/bank8.png"
+      ],
+      "technologies": [
+        "Java", "Spring", "JUnit", "Mockito", "Cucumber", "MySQL", "Angular", "RabbitMQ", "Docker", "Kubernetes"
+      ],
+      "linkUrl": "-",
+      "gitUrls": ["https://github.com/theShus/Banka-2-Frontend", "https://github.com/theShus/Banka-2-Backend", "https://github.com/theShus/Banka-2-Infrastructure"],
+      "people": "Team of 20 in three teams",
+      "date": "30-06-2023",
+      "categoryLabel": "Full-Stack",
+      "description": "This application simulates a stock trading platform designed for use by agents in a banking environment. It retrieves the latest data on stocks, futures, forex, and other financial instruments from online databases, allowing multiple users to engage in simultaneous trading activities. Agents can seamlessly buy and sell investments, providing a realistic trading experience.\nAdditionally, the app features components that simulate banking accounts for regular customers, as well as a rudimentary mobile app to facilitate card purchases and provide access to user accounts.\nThe infrastructure is built using a microservices architecture, enabling efficient communication between services via HTTP methods. The application is divided into distinct components that manage user accounts, agent actions, specialized purchases, and client interactions.\nTo ensure scalability and ease of deployment, the entire application has been containerized using Docker and is orchestrated on a Kubernetes cluster."
+    },
+    {
+      "id": 3,
+      "title": "Vimeo Video Demo App",
+      "thumbnail": "assets/VideoPlayer/player.png",
+      "imageUrls": [
+        "assets/VideoPlayer/player.png"
+      ],
+      "technologies": [
+        "Kotlin",
+        "Jetpack Compose",
+        "Vimeo API",
+        "Kotlin Coroutines",
+        "RabbitMQ",
+        "MySQL"
+      ],
+      "linkUrl": "-",
+      "gitUrls": [
+        "https://github.com/theShus/Video_player"
+      ],
+      "people": "Luka Jeremić",
+      "date": "11.13.2023",
+      "categoryLabel": "Mobile",
+      "description": "This is a demo app that collects videos (currently set to music) from the Vimeo API and displays them in a RecyclerView. The app consists of two parts:\n Regular XML App: A traditional Android app using XML-based UI.\n    Compose App: An Android app using Jetpack Compose for UI.\n\nFunctionality\n\nThe app provides the following functionalities:\n    Automatic Loading: The app automatically loads 20 videos on the first launch.\n    Lazy Loading: Additional videos are loaded when the user scrolls to the bottom of the list.\n    Detailed View: Clicking on a video opens a detailed description of it and simultaneously opens a player.\n    Two App Versions: The app has both traditional XML-based UI and Jetpack Compose-based UI.\n\nSwapping Between Apps\nTo swap between the two versions of the app, press the floating action button."
+    },
+    {
+      "id": 4,
+      "title": "K-Means Clustering",
+      "thumbnail": "assets/Clustering/clustering.png",
+      "imageUrls": [
+        "assets/Clustering/clustering.png"
+      ],
+      "technologies": [
+        "Java"
+      ],
+      "linkUrl": "-",
+      "gitUrls": ["https://github.com/theShus/K_means_clustering_waste_sites"],
+      "people": "Luka Jeremić",
+      "date": "01.02.2024",
+      "categoryLabel": "Full-Stack",
+      "description": "This Java project utilizes the K-means clustering algorithm to find the optimal placement of processing plants across Europe. The primary objective is to minimize the distance between waste accumulation sites (garbage collection facilities) and processing plants, enhancing the efficiency of waste management.\n\nContext\nIn Europe, various locations serve as garbage collection facilities, each with a specific annual capacity measured in tonnes. This capacity represents the amount of waste accumulated annually at each site. The project aims to determine the sub-optimal placement of a given number of processing plants to efficiently process this accumulated waste.\n\nK-Means Clustering\nK-means clustering is a fundamental algorithm in the field of clustering. It segregates a given dataset into a specified number (k) of clusters, optimizing the intra-cluster variance. In this project, the algorithm is tailored to handle GPS coordinates of locations in Europe, clustering them based on their proximity and capacity for waste accumulation."
+    },
+    {
+      "id": 5,
+      "title": "Docker Swarm vs Kubernetes Research Project",
+      "thumbnail": "assets/SwarmVsKub/compareTumbnail.png",
+      "imageUrls": [
+        "assets/SwarmVsKub/compare1.png",
+        "assets/SwarmVsKub/compare2.png",
+        "assets/SwarmVsKub/compare3.png",
+        "assets/SwarmVsKub/compare4.png"
+      ],
+      "technologies": [
+        "Java", "Docker", "Kubernetes", "Python"
+      ],
+      "linkUrl": "-",
+      "gitUrls": ["https://github.com/theShus/DockerSwarmvsKubernetesResearchProject"],
+      "people": "Luka Jeremić",
+      "date": "01.09.2024",
+      "categoryLabel": "Research",
+      "description": ""
+    }
+  ]
+}
