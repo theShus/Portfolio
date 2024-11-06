@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   selectedPage: string = 'about';
   currentAnimation: string = '';
   isPanelOpen = false;
@@ -39,5 +39,12 @@ export class HomeComponent {
 
   openLinkedIn() {
     window.open("https://www.linkedin.com/in/luka-jeremic-853399248/", 'https://www.linkedin.com/in/luka-jeremic-853399248/');
+  }
+
+  ngOnInit(): void {
+    const value = localStorage.getItem('page');
+    if (value != null && value != ""){
+      this.selectedPage = value
+    }
   }
 }

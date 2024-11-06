@@ -25,6 +25,7 @@ export class PortfolioComponent implements OnInit{
 
   openProjectDetails(projectId: number){
     const project = this.portfolioService.getPortfolioItemById(projectId)
+    localStorage.setItem('page', 'portfolio');
     this.router.navigate(['/portfolio-item', projectId],  { state: { project } })
   }
 
