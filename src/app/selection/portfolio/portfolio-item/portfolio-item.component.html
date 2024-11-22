@@ -10,7 +10,15 @@
     <div class="carousel-inner">
       <div class="carousel-item"  style="background-color: white" *ngFor="let slide of this.project.imageUrls; let i = index"
            [ngClass]="{ 'active': i === currentSlideIndex }">
-        <img [src]="slide" [alt]="slide"/>
+
+        <ng-container *ngIf="isVideo(slide); else imageTemplate">
+          <video controls [src]="slide" class="video-slide"></video>
+        </ng-container>
+
+        <ng-template #imageTemplate>
+          <img [src]="slide" [alt]="slide" class="image-slide" />
+        </ng-template>
+<!--        <img [src]="slide" [alt]="slide"/>-->
       </div>
     </div>
     <button [hidden]="buttonsVisible" class="prev" (click)="moveSlide(-1)">&#10094;</button>

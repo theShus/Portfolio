@@ -1,0 +1,11 @@
+1.
+ng add angular-cli-ghpages
+
+2.
+ng build --base-href "https://theshus.github.io/Portfolio/"
+
+2.5
+gh auth login
+
+3.
+npx angular-cli-ghpages --dir=dist/resume --no-silent

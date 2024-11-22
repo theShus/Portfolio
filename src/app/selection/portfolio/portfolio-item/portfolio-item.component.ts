@@ -25,6 +25,11 @@ export class PortfolioItemComponent implements OnInit{
     this.currentSlideIndex = (this.currentSlideIndex + step + totalSlides) % totalSlides; // Handle wrapping around
   }
 
+  isVideo(url: string): boolean {
+    const extension = url.split('.').pop()?.toLowerCase();
+    return extension == 'mp4';
+  }
+
   goToSlide(index: number) {
     this.currentSlideIndex = index;
   }

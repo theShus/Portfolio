@@ -48,6 +48,11 @@ body {
   height: auto;
 }
 
+.image-slide, .video-slide {
+  width: 100%;
+  height: auto;
+}
+
 .prev, .next {
   cursor: pointer;
   position: absolute;

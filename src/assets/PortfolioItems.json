@@ -1,8 +1,29 @@
 {
   "portfolioItems": [
     {
+      "id": 6,
+      "title": "Island game",
+      "thumbnail": "assets/IslandGame/islandGame.png",
+      "imageUrls": [
+        "assets/IslandGame/Gameplay compressed.mp4"
+      ],
+      "technologies": [
+        "Angular",
+        "Java",
+        "Spring",
+        "RESTful API",
+        "Docker"
+      ],
+      "linkUrl": "",
+      "gitUrls": ["https://github.com/theShus/IslandGameBack", "https://github.com/theShus/IslandGameFront"],
+      "people": "Luka Jeremić",
+      "date": "11/2024",
+      "categoryLabel": "Full-Stack",
+      "description": "Island Game - Full Stack Project Overview\n\nIntroduction\nThe Island Game is an interactive full-stack application that challenges players to find the island with the highest average height on a grid map. It seamlessly integrates a Java Spring Boot backend with an Angular frontend to provide an engaging user experience.\n\nProject Overview\nPlayers are presented with a 30x30 grid map consisting of water and land cells, each assigned specific height values. Connected land cells form islands, and the objective is to identify the island with the highest average height within three attempts.\n\nBackend Details\n    Data Retrieval and Parsing: Fetches raw map data from an external API endpoint and processes it to distinguish between water cells (height 0) and land cells (height > 0).\n    Island Identification: Groups connected land cells into distinct islands and calculates the average height for each island.\n    REST API: Provides structured and processed data to the frontend for visualization and gameplay.\n\nTech Stack\n    Java Spring Boot: Handles API requests, data parsing, and core backend logic.\n    RESTful API: Enables communication between the backend and frontend.\n    Docker: Facilitates deployment alongside the frontend using a docker-compose.yml file.\n\nFrontend Details\n    Interactive Grid Map: Displays a dynamic grid where players can visualize water and land cells.\n    User Interaction: Allows players to click on cells to select and highlight islands.\n    Game Mechanics: Tracks player guesses, provides feedback, and manages game state (win, lose, restart).\n\nTech Stack\n    Angular: Manages the dynamic user interface, user interactions, and game logic.\n    REST API Calls: Communicates with the backend to fetch map data and submit guesses.\n    Docker: Ensures easy deployment alongside the backend."
+    },
+    {
       "id": 1,
-      "title": "Cuttle Project",
+      "title": "Cuttle Card Game",
       "thumbnail": "assets/Cuttle/cuttle3.png",
       "imageUrls": [
         "assets/Cuttle/cuttle1.png",
@@ -22,7 +43,7 @@
       "linkUrl": "https://cuttle-front-docker.onrender.com",
       "gitUrls": ["https://github.com/theShus/Cuttle_Back", "https://github.com/theShus/Cuttle_Front"],
       "people": "Luka Jeremić",
-      "date": "21-11-2023",
+      "date": "11-2023",
       "categoryLabel": "Full-Stack",
       "description": "Developed a multi-player web application designed for up to four participants. Utilizing coordinate tracking and DOM tree filtering to build an iteractive UI. The application operates in real-time, with gameplay and visual updates facilitated through a multi-socket system, ensuring continuous data synchronization across multiple players.and is backed by a central server."
     },
@@ -46,7 +67,7 @@
       "linkUrl": "-",
       "gitUrls": ["https://github.com/theShus/Banka-2-Frontend", "https://github.com/theShus/Banka-2-Backend", "https://github.com/theShus/Banka-2-Infrastructure"],
       "people": "Team of 20 in three teams",
-      "date": "30-06-2023",
+      "date": "06/2023",
       "categoryLabel": "Full-Stack",
       "description": "This application simulates a stock trading platform designed for use by agents in a banking environment. It retrieves the latest data on stocks, futures, forex, and other financial instruments from online databases, allowing multiple users to engage in simultaneous trading activities. Agents can seamlessly buy and sell investments, providing a realistic trading experience.\nAdditionally, the app features components that simulate banking accounts for regular customers, as well as a rudimentary mobile app to facilitate card purchases and provide access to user accounts.\nThe infrastructure is built using a microservices architecture, enabling efficient communication between services via HTTP methods. The application is divided into distinct components that manage user accounts, agent actions, specialized purchases, and client interactions.\nTo ensure scalability and ease of deployment, the entire application has been containerized using Docker and is orchestrated on a Kubernetes cluster."
     },
@@ -70,7 +91,7 @@
         "https://github.com/theShus/Video_player"
       ],
       "people": "Luka Jeremić",
-      "date": "11.13.2023",
+      "date": "13/2023",
       "categoryLabel": "Mobile",
       "description": "This is a demo app that collects videos (currently set to music) from the Vimeo API and displays them in a RecyclerView. The app consists of two parts:\n Regular XML App: A traditional Android app using XML-based UI.\n    Compose App: An Android app using Jetpack Compose for UI.\n\nFunctionality\n\nThe app provides the following functionalities:\n    Automatic Loading: The app automatically loads 20 videos on the first launch.\n    Lazy Loading: Additional videos are loaded when the user scrolls to the bottom of the list.\n    Detailed View: Clicking on a video opens a detailed description of it and simultaneously opens a player.\n    Two App Versions: The app has both traditional XML-based UI and Jetpack Compose-based UI.\n\nSwapping Between Apps\nTo swap between the two versions of the app, press the floating action button."
     },
@@ -87,7 +108,7 @@
       "linkUrl": "-",
       "gitUrls": ["https://github.com/theShus/K_means_clustering_waste_sites"],
       "people": "Luka Jeremić",
-      "date": "01.02.2024",
+      "date": "02/2024",
       "categoryLabel": "Full-Stack",
       "description": "This Java project utilizes the K-means clustering algorithm to find the optimal placement of processing plants across Europe. The primary objective is to minimize the distance between waste accumulation sites (garbage collection facilities) and processing plants, enhancing the efficiency of waste management.\n\nContext\nIn Europe, various locations serve as garbage collection facilities, each with a specific annual capacity measured in tonnes. This capacity represents the amount of waste accumulated annually at each site. The project aims to determine the sub-optimal placement of a given number of processing plants to efficiently process this accumulated waste.\n\nK-Means Clustering\nK-means clustering is a fundamental algorithm in the field of clustering. It segregates a given dataset into a specified number (k) of clusters, optimizing the intra-cluster variance. In this project, the algorithm is tailored to handle GPS coordinates of locations in Europe, clustering them based on their proximity and capacity for waste accumulation."
     },
@@ -107,7 +128,7 @@
       "linkUrl": "-",
       "gitUrls": ["https://github.com/theShus/DockerSwarmvsKubernetesResearchProject"],
       "people": "Luka Jeremić",
-      "date": "01.09.2024",
+      "date": "09/2024",
       "categoryLabel": "Research",
       "description": ""
     }
