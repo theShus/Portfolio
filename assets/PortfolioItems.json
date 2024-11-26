@@ -14,7 +14,7 @@
         "RESTful API",
         "Docker"
       ],
-      "linkUrl": "",
+      "linkUrl": "https://island-game-front.onrender.com/",
       "gitUrls": ["https://github.com/theShus/IslandGameBack", "https://github.com/theShus/IslandGameFront"],
       "people": "Luka Jeremić",
       "date": "11/2024",
