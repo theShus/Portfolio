@@ -131,3 +131,18 @@ textarea.form-control {
   background-color: #0099e5;
   color: white;
 }
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .heading {
+    margin-left: 20px; /* Remove the 90px desktop margin */
+  }
+
+  .contact-cards {
+    max-width: 90%; /* Expand cards to fit phone screen */
+  }
+
+  .contact-form {
+    padding: 10px 20px; /* Reduce padding to prevent horizontal scrolling */
+  }
+}

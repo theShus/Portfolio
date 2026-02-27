@@ -139,3 +139,28 @@ hr {
     width: 100%;
   }
 }
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .heading {
+    margin-left: 20px;
+  }
+
+  .portfolio-filters {
+    justify-content: center; /* Center the filter menu */
+    margin-right: 0;
+    padding: 0 10px;
+    flex-wrap: wrap; /* Allow filters to wrap to a new line */
+  }
+
+  .portfolio-grid {
+    margin-left: 0; /* Remove 100px margin */
+    justify-content: center; /* Center the items */
+    padding: 0 15px;
+  }
+
+  .portfolio-item {
+    width: 100%; /* Make items fill the screen */
+    max-width: 350px; /* Keep them from getting too huge */
+  }
+}

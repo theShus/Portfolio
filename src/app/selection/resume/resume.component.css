@@ -21,7 +21,6 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  /*border: red 2px solid;*/
 }
 
 .block-title {
@@ -40,18 +39,18 @@ hr {
   height: auto;
 }
 
-
 .left-part {
   width: 25%;
   text-align: right;
-  position: relative;
-  padding-right: 20px;
+  padding-right: 35px; /* Safely pushes text away from the circle */
+  box-sizing: border-box; /* FIX: Forces padding to stay inside the 25% boundary */
 }
 
 .right-part {
-  width: 65%;
-  padding-left: 50px;
+  width: 75%; /* Expanded to fill the rest of the space smoothly */
+  padding-left: 40px;
   border-radius: 8px;
+  box-sizing: border-box; /* FIX: Keeps alignment clean on the right side too */
 }
 
 .item-period {
@@ -78,40 +77,65 @@ hr {
   font-size: 1rem;
   color: #666;
   line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* Styled lists for job/project descriptions */
+.text ul {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.text li {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 8px;
 }
 
 .timeline-item {
   display: flex;
-  position: relative; /* Needed to position the vertical line */
+  position: relative; /* Needed to position the vertical line and circle perfectly */
 }
 
-/* Vertical Line todo the line moves when you zoom in or out */
+/* Vertical Line FIX - Anchored exactly to the 25% split */
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: 26.5%;
+  left: 25%;
   top: 0;
   bottom: 0;
   width: 2px;
-  height: auto;
-  background-color: #e0e0e0; /* Light gray color for the vertical line */
+  background-color: #e0e0e0;
+  z-index: 1;
 }
 
-/* Circle on the line */
-.timeline-item .left-part::before {
+/* Circle FIX - Anchored exactly to the 25% split and perfectly centered using transform */
+.timeline-item::after {
   content: "";
   position: absolute;
-  right: -16px; /* Position the circle closer to the right edge */
+  left: 25%;
   top: 38px;
   width: 12px;
   height: 12px;
   background-color: #fff;
   border: 3px solid #0099e5;
   border-radius: 50%;
+  transform: translateX(-50%); /* Locks the circle directly center over the line */
+  z-index: 2;
 }
 
 /* Responsive styling */
 @media (max-width: 768px) {
+  /* Added these two rules for the headings */
+  .heading {
+    margin-left: 20px;
+  }
+  .block-title {
+    margin-left: 20px;
+  }
+
+  /* Your existing timeline mobile fixes */
   .timeline-item {
     flex-direction: column;
   }
@@ -120,15 +144,12 @@ hr {
   .right-part {
     width: 100%;
     text-align: left;
+    padding: 0 20px;
   }
 
-  .timeline-item::before {
+  .timeline-item::before,
+  .timeline-item::after {
     display: none;
-  }
-
-  .timeline-item .left-part::after {
-    right: 50%; /* Center the circle in mobile view */
-    transform: translateX(50%);
   }
 }
 
@@ -184,4 +205,3 @@ hr {
   color: #555;
   line-height: 1.6;
 }
-

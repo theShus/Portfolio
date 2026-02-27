@@ -210,3 +210,32 @@ body {
 .close-button:hover {
   color: #000;
 }
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .heading {
+    margin-left: 20px;
+    font-size: 32px; /* Slightly smaller for mobile */
+  }
+
+  .carousel-and-description {
+    flex-direction: column; /* Stack image on top of description */
+    gap: 15px;
+  }
+
+  .carousel-container {
+    width: 100%;
+    margin-left: 0; /* Remove the 20% left margin */
+  }
+
+  .right-box {
+    width: 100%;
+    padding: 0 20px; /* Add breathing room around text */
+    box-sizing: border-box;
+  }
+
+  .close-button {
+    top: 10px;
+    right: 20px;
+  }
+}

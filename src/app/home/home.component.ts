@@ -25,8 +25,11 @@ export class HomeComponent{
         // Update the selected page and apply the corresponding "in" animation
         this.selectedPage = page;
         this.currentAnimation = 'swipe-left-in';
-      }, 200); // Duration should match animation duration in CSS
+      }, 200);
     }
+
+    // FIX: Automatically close the side panel on mobile after clicking a link
+    this.isPanelOpen = false;
   }
 
   toggleLeftPanel() {
@@ -41,4 +44,8 @@ export class HomeComponent{
     window.open("https://www.linkedin.com/in/luka-jeremic-853399248/", 'https://www.linkedin.com/in/luka-jeremic-853399248/');
   }
 
+  openEmail() {
+    window.open("mailto:luka.jeremic.social@gmail.com");
+
+  }
 }

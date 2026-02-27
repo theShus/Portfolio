@@ -19,9 +19,10 @@
       <li (click)="selectPage('contact')" [ngClass]="{'selected': selectedPage === 'contact'}">Contact</li>
     </ul>
 
-    <div class="social-links" (click)="openGit()">
+    <div class="social-links">
       <a (click)="openGit()"><i class="fa-brands fa-github logos" style="padding-right: 20px"></i></a>
-      <a (click)="openLinkedIn()"><i class="fa-brands fa-linkedin logos" ></i></a>
+      <a (click)="openLinkedIn()"><i class="fa-brands fa-linkedin logos" style="padding-right: 20px" ></i></a>
+      <a (click)="openEmail()"><i class="fa-solid fa-envelope logos"></i></a>
     </div>
   </div>
 
